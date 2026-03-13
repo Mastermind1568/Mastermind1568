@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asabis Consulting Services</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+/* ==========================================================================
+   Asabis Consulting Services - Complete Stylesheet
+   ========================================================================== */
+:root {
+    --color-primary: #1B3A5C;
+    --color-primary-light: #2A5580;
+    --color-primary-dark: #0F2440;
+    --color-secondary: #C8A951;
+    --color-secondary-light: #D4BC72;
+    --color-secondary-dark: #A88B30;
+    --color-accent: #2E86AB;
+    --color-white: #FFFFFF;
+    --color-off-white: #F8F9FA;
+    --color-light-gray: #EEF1F5;
+    --color-mid-gray: #6C7A89;
+    --color-dark-gray: #3D4F5F;
+    --color-dark: #1A1A2E;
+    --color-success: #27AE60;
+    --color-body-bg: #FFFFFF;
+    --color-text: #3D4F5F;
+    --color-heading: #1A1A2E;
+    --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --font-heading: 'Playfair Display', Georgia, 'Times New Roman', serif;
+    --section-padding: 100px 0;
+    --container-width: 1200px;
+    --container-padding: 0 24px;
+    --radius-sm: 6px;
+    --radius-md: 12px;
+    --radius-lg: 20px;
+    --radius-xl: 30px;
+    --shadow-sm: 0 2px 8px rgba(27, 58, 92, 0.06);
+    --shadow-md: 0 4px 20px rgba(27, 58, 92, 0.1);
+    --shadow-lg: 0 8px 40px rgba(27, 58, 92, 0.12);
+    --shadow-xl: 0 16px 60px rgba(27, 58, 92, 0.15);
+    --transition-fast: 0.2s ease;
+    --transition-base: 0.3s ease;
+    --transition-slow: 0.5s ease;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:var(--font-primary);color:var(--color-text);background:var(--color-body-bg);line-height:1.7;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;overflow-x:hidden}
+img{max-width:100%;height:auto;display:block}
+a{text-decoration:none;color:inherit;transition:color var(--transition-fast)}
+ul,ol{list-style:none}
+h1,h2,h3,h4,h5,h6{font-family:var(--font-heading);color:var(--color-heading);line-height:1.3;font-weight:700}
+h1{font-size:clamp(2.2rem,5vw,3.5rem)}
+h2{font-size:clamp(1.8rem,4vw,2.8rem)}
+h3{font-size:clamp(1.3rem,2.5vw,1.6rem)}
+h4{font-size:1.2rem}
+p{margin-bottom:1rem}
+.container{max-width:var(--container-width);margin:0 auto;padding:var(--container-padding)}
+.text-center{text-align:center}
+.section-padding{padding:var(--section-padding)}
+.section-header{text-align:center;max-width:700px;margin:0 auto 60px}
+.section-header .section-label{display:inline-block;font-family:var(--font-primary);font-size:0.85rem;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--color-secondary);margin-bottom:16px}
+.section-header h2{margin-bottom:20px}
+.section-header p{color:var(--color-mid-gray);font-size:1.05rem}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 32px;border-radius:var(--radius-sm);font-family:var(--font-primary);font-size:0.95rem;font-weight:600;cursor:pointer;border:2px solid transparent;transition:all var(--transition-base);letter-spacing:0.3px}
+.btn-primary{background:var(--color-primary);color:var(--color-white);border-color:var(--color-primary)}
+.btn-primary:hover{background:var(--color-primary-light);border-color:var(--color-primary-light);transform:translateY(-2px);box-shadow:var(--shadow-md)}
+.btn-secondary{background:var(--color-secondary);color:var(--color-white);border-color:var(--color-secondary)}
+.btn-secondary:hover{background:var(--color-secondary-dark);border-color:var(--color-secondary-dark);transform:translateY(-2px);box-shadow:var(--shadow-md)}
+.btn-outline{background:transparent;color:var(--color-white);border-color:var(--color-white)}
+.btn-outline:hover{background:var(--color-white);color:var(--color-primary);transform:translateY(-2px)}
+.btn-outline-dark{background:transparent;color:var(--color-primary);border-color:var(--color-primary)}
+.btn-outline-dark:hover{background:var(--color-primary);color:var(--color-white);transform:translateY(-2px)}
+.btn-lg{padding:18px 40px;font-size:1rem}
+
+/* Top Bar */
+.top-bar{background:var(--color-primary-dark);color:rgba(255,255,255,0.8);font-size:0.85rem;padding:10px 0}
+.top-bar .container{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+.top-bar-left{display:flex;align-items:center;gap:24px;flex-wrap:wrap}
+.top-bar-left a,.top-bar-left span{display:inline-flex;align-items:center;gap:6px;color:rgba(255,255,255,0.8)}
+.top-bar-left a:hover{color:var(--color-secondary)}
+.top-bar-left i{color:var(--color-secondary);font-size:0.8rem}
+.top-bar-right{display:flex;align-items:center;gap:16px}
+.top-bar-right a{color:rgba(255,255,255,0.7);font-size:0.9rem;transition:color var(--transition-fast)}
+.top-bar-right a:hover{color:var(--color-secondary)}
+
+/* Header */
+.site-header{background:var(--color-white);position:sticky;top:0;z-index:1000;box-shadow:var(--shadow-sm);transition:box-shadow var(--transition-base)}
+.site-header.scrolled{box-shadow:var(--shadow-md)}
+.navbar{display:flex;justify-content:space-between;align-items:center;padding:16px 0}
+.navbar-brand{display:flex;align-items:center;gap:12px}
+.brand-text{font-family:var(--font-heading);font-size:1.5rem;font-weight:700;color:var(--color-primary);line-height:1.2}
+.brand-text small{display:block;font-family:var(--font-primary);font-size:0.7rem;font-weight:400;color:var(--color-mid-gray);letter-spacing:1.5px;text-transform:uppercase}
+.navbar-nav{display:flex;align-items:center;gap:4px}
+.navbar-nav .nav-item .nav-link{display:block;padding:10px 18px;font-size:0.92rem;font-weight:500;color:var(--color-dark-gray);border-radius:var(--radius-sm);transition:all var(--transition-fast)}
+.navbar-nav .nav-item .nav-link:hover,.navbar-nav .nav-item.active .nav-link{color:var(--color-primary);background:var(--color-light-gray)}
+.navbar-cta{margin-left:12px}
+.navbar-cta .btn{padding:10px 24px;font-size:0.88rem}
+.navbar-toggle{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:8px}
+.navbar-toggle span{display:block;width:26px;height:2.5px;background:var(--color-primary);border-radius:2px;transition:all var(--transition-fast)}
+
+/* Hero */
+.hero{position:relative;background:linear-gradient(135deg,var(--color-primary-dark) 0%,var(--color-primary) 50%,var(--color-accent) 100%);color:var(--color-white);padding:120px 0 100px;overflow:hidden}
+.hero::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:radial-gradient(circle at 20% 50%,rgba(200,169,81,0.1) 0%,transparent 50%),radial-gradient(circle at 80% 20%,rgba(46,134,171,0.15) 0%,transparent 50%);pointer-events:none}
+.hero::after{content:'';position:absolute;bottom:-2px;left:0;right:0;height:80px;background:var(--color-white);clip-path:ellipse(55% 100% at 50% 100%)}
+.hero .container{position:relative;z-index:2}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.hero-content{max-width:580px}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.12);backdrop-filter:blur(10px);padding:8px 18px;border-radius:50px;font-size:0.82rem;font-weight:500;margin-bottom:28px;border:1px solid rgba(255,255,255,0.15)}
+.hero-badge i{color:var(--color-secondary)}
+.hero h1{color:var(--color-white);margin-bottom:24px;font-weight:700;line-height:1.2}
+.hero h1 span{color:var(--color-secondary)}
+.hero-text{font-size:1.1rem;line-height:1.8;color:rgba(255,255,255,0.85);margin-bottom:36px}
+.hero-buttons{display:flex;gap:16px;flex-wrap:wrap}
+.hero-stats{display:flex;gap:40px;margin-top:48px;padding-top:32px;border-top:1px solid rgba(255,255,255,0.15)}
+.hero-stat{text-align:center}
+.hero-stat .stat-number{display:block;font-family:var(--font-heading);font-size:2.2rem;font-weight:700;color:var(--color-secondary)}
+.hero-stat .stat-label{font-size:0.85rem;color:rgba(255,255,255,0.7)}
+.hero-visual{display:flex;justify-content:center;align-items:center}
+.hero-cards{position:relative;width:100%;max-width:480px;height:400px}
+.hero-card{position:absolute;background:var(--color-white);border-radius:var(--radius-lg);padding:28px;box-shadow:var(--shadow-xl);color:var(--color-text)}
+.hero-card-1{top:0;left:0;width:280px;z-index:3;animation:float-card 6s ease-in-out infinite}
+.hero-card-2{top:60px;right:0;width:260px;z-index:2;animation:float-card 6s ease-in-out infinite 1s}
+.hero-card-3{bottom:0;left:40px;width:300px;z-index:1;animation:float-card 6s ease-in-out infinite 2s}
+.hero-card-icon{width:48px;height:48px;border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;font-size:1.2rem;margin-bottom:14px}
+.hero-card-icon.blue{background:rgba(46,134,171,0.12);color:var(--color-accent)}
+.hero-card-icon.gold{background:rgba(200,169,81,0.15);color:var(--color-secondary-dark)}
+.hero-card-icon.green{background:rgba(39,174,96,0.12);color:var(--color-success)}
+.hero-card h4{font-family:var(--font-primary);font-size:0.95rem;font-weight:600;margin-bottom:6px}
+.hero-card p{font-size:0.82rem;color:var(--color-mid-gray);margin-bottom:0;line-height:1.5}
+@keyframes float-card{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+
+/* Services */
+.services{background:var(--color-off-white)}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
+.service-card{background:var(--color-white);border-radius:var(--radius-lg);padding:40px 32px;text-align:center;transition:all var(--transition-base);border:1px solid transparent;position:relative;overflow:hidden}
+.service-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:var(--color-secondary);transform:scaleX(0);transition:transform var(--transition-base)}
+.service-card:hover{transform:translateY(-8px);box-shadow:var(--shadow-lg);border-color:rgba(27,58,92,0.06)}
+.service-card:hover::before{transform:scaleX(1)}
+.service-icon{width:72px;height:72px;border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;margin:0 auto 24px;font-size:1.6rem;transition:all var(--transition-base)}
+.service-icon.icon-blue{background:rgba(46,134,171,0.1);color:var(--color-accent)}
+.service-icon.icon-gold{background:rgba(200,169,81,0.12);color:var(--color-secondary-dark)}
+.service-icon.icon-navy{background:rgba(27,58,92,0.1);color:var(--color-primary)}
+.service-icon.icon-green{background:rgba(39,174,96,0.1);color:var(--color-success)}
+.service-card:hover .service-icon{transform:scale(1.1)}
+.service-card h3{font-family:var(--font-primary);font-size:1.15rem;font-weight:600;margin-bottom:14px}
+.service-card p{color:var(--color-mid-gray);font-size:0.92rem;line-height:1.7;margin-bottom:20px}
+.service-link{display:inline-flex;align-items:center;gap:6px;font-size:0.88rem;font-weight:600;color:var(--color-primary);transition:all var(--transition-fast)}
+.service-link:hover{color:var(--color-secondary);gap:10px}
+
+/* Offerings */
+.offerings{background:var(--color-white)}
+.offerings-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px}
+.offerings-block{background:var(--color-off-white);border-radius:var(--radius-lg);padding:48px 40px;position:relative;overflow:hidden}
+.offerings-block::after{content:'';position:absolute;top:0;left:0;width:4px;height:100%;background:linear-gradient(to bottom,var(--color-secondary),var(--color-primary))}
+.offerings-block h3{margin-bottom:8px;font-size:1.35rem}
+.offerings-block .offerings-subtitle{color:var(--color-mid-gray);margin-bottom:28px;font-size:0.95rem}
+.offerings-list{display:flex;flex-direction:column;gap:14px}
+.offerings-list li{display:flex;align-items:flex-start;gap:12px;font-size:0.95rem;color:var(--color-dark-gray)}
+.offerings-list li i{color:var(--color-success);margin-top:4px;flex-shrink:0}
+
+/* About */
+.about-section{background:var(--color-primary);color:var(--color-white);position:relative;overflow:hidden}
+.about-section::before{content:'';position:absolute;top:-50%;right:-10%;width:500px;height:500px;border-radius:50%;background:rgba(200,169,81,0.06);pointer-events:none}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.about-content .section-label{color:var(--color-secondary);font-family:var(--font-primary);font-size:0.85rem;font-weight:600;letter-spacing:3px;text-transform:uppercase;margin-bottom:16px;display:block}
+.about-content h2{color:var(--color-white);margin-bottom:24px}
+.about-content p{color:rgba(255,255,255,0.8);font-size:1.05rem;line-height:1.8;margin-bottom:20px}
+.about-features{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:36px}
+.about-feature{display:flex;align-items:flex-start;gap:14px}
+.about-feature-icon{width:44px;height:44px;border-radius:var(--radius-sm);background:rgba(200,169,81,0.15);display:flex;align-items:center;justify-content:center;color:var(--color-secondary);flex-shrink:0}
+.about-feature h4{color:var(--color-white);font-family:var(--font-primary);font-size:0.95rem;font-weight:600;margin-bottom:4px}
+.about-feature p{font-size:0.82rem;margin-bottom:0}
+.about-visual{display:flex;flex-direction:column;gap:24px}
+.about-stat-card{background:rgba(255,255,255,0.08);backdrop-filter:blur(10px);border-radius:var(--radius-md);padding:28px 32px;display:flex;align-items:center;gap:20px;border:1px solid rgba(255,255,255,0.1);transition:all var(--transition-base)}
+.about-stat-card:hover{background:rgba(255,255,255,0.12);transform:translateX(8px)}
+.about-stat-card .stat-icon{width:56px;height:56px;border-radius:var(--radius-md);background:rgba(200,169,81,0.2);display:flex;align-items:center;justify-content:center;font-size:1.4rem;color:var(--color-secondary);flex-shrink:0}
+.about-stat-card h4{color:var(--color-white);font-family:var(--font-primary);font-size:1rem;font-weight:600;margin-bottom:4px}
+.about-stat-card p{font-size:0.85rem;margin-bottom:0}
+
+/* Testimonials */
+.testimonials{background:var(--color-off-white)}
+.testimonials-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
+.testimonial-card{background:var(--color-white);border-radius:var(--radius-lg);padding:36px 32px;position:relative;transition:all var(--transition-base);border:1px solid var(--color-light-gray)}
+.testimonial-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg);border-color:transparent}
+.testimonial-quote-icon{font-size:2rem;color:var(--color-secondary);opacity:0.3;margin-bottom:16px}
+.testimonial-text{font-size:0.95rem;line-height:1.8;color:var(--color-dark-gray);margin-bottom:24px;font-style:italic}
+.testimonial-author{display:flex;align-items:center;gap:14px}
+.testimonial-avatar{width:48px;height:48px;border-radius:50%;background:var(--color-primary);color:var(--color-white);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:1rem}
+.testimonial-author-info h4{font-family:var(--font-primary);font-size:0.95rem;font-weight:600;margin-bottom:2px}
+.testimonial-author-info span{font-size:0.8rem;color:var(--color-mid-gray)}
+.testimonial-stars{color:var(--color-secondary);font-size:0.8rem;margin-bottom:16px;display:flex;gap:3px}
+
+/* CTA */
+.cta-section{background:linear-gradient(135deg,var(--color-primary-dark) 0%,var(--color-primary) 100%);color:var(--color-white);text-align:center;padding:80px 0;position:relative;overflow:hidden}
+.cta-section::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:radial-gradient(circle at 50% 50%,rgba(200,169,81,0.1) 0%,transparent 60%);pointer-events:none}
+.cta-section .container{position:relative;z-index:2}
+.cta-section h2{color:var(--color-white);margin-bottom:20px}
+.cta-section p{color:rgba(255,255,255,0.8);font-size:1.1rem;max-width:600px;margin:0 auto 36px}
+.cta-buttons{display:flex;justify-content:center;gap:16px;flex-wrap:wrap}
+
+/* Contact */
+.contact-section{background:var(--color-white)}
+.contact-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:60px}
+.contact-info-cards{display:flex;flex-direction:column;gap:20px}
+.contact-info-card{display:flex;align-items:flex-start;gap:16px;padding:24px;background:var(--color-off-white);border-radius:var(--radius-md);transition:all var(--transition-base)}
+.contact-info-card:hover{background:var(--color-white);box-shadow:var(--shadow-md);transform:translateX(4px)}
+.contact-info-card .card-icon{width:50px;height:50px;border-radius:var(--radius-sm);background:var(--color-primary);display:flex;align-items:center;justify-content:center;color:var(--color-white);flex-shrink:0}
+.contact-info-card h4{font-family:var(--font-primary);font-size:0.95rem;font-weight:600;margin-bottom:6px}
+.contact-info-card p{font-size:0.9rem;color:var(--color-mid-gray);margin-bottom:0}
+.contact-info-card a{color:var(--color-primary)}
+.contact-info-card a:hover{color:var(--color-secondary)}
+.contact-form-wrap{background:var(--color-off-white);border-radius:var(--radius-lg);padding:40px}
+.contact-form-wrap h3{margin-bottom:8px}
+.contact-form-wrap>p{color:var(--color-mid-gray);font-size:0.92rem;margin-bottom:28px}
+.form-group{margin-bottom:20px}
+.form-group label{display:block;font-size:0.88rem;font-weight:500;color:var(--color-dark-gray);margin-bottom:6px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.form-control{width:100%;padding:14px 16px;border:1.5px solid var(--color-light-gray);border-radius:var(--radius-sm);font-family:var(--font-primary);font-size:0.92rem;color:var(--color-dark-gray);background:var(--color-white);transition:border-color var(--transition-fast);outline:none}
+.form-control:focus{border-color:var(--color-primary);box-shadow:0 0 0 3px rgba(27,58,92,0.08)}
+textarea.form-control{resize:vertical;min-height:120px}
+
+/* Footer */
+.site-footer{background:var(--color-dark);color:rgba(255,255,255,0.7);padding:80px 0 0}
+.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.2fr;gap:40px;padding-bottom:60px;border-bottom:1px solid rgba(255,255,255,0.08)}
+.footer-brand .brand-text{color:var(--color-white);margin-bottom:16px}
+.footer-brand p{font-size:0.9rem;line-height:1.7;margin-bottom:20px}
+.footer-social{display:flex;gap:12px}
+.footer-social a{width:40px;height:40px;border-radius:var(--radius-sm);background:rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.6);transition:all var(--transition-fast)}
+.footer-social a:hover{background:var(--color-secondary);color:var(--color-white);transform:translateY(-3px)}
+.footer-column h4{color:var(--color-white);font-family:var(--font-primary);font-size:1rem;font-weight:600;margin-bottom:24px}
+.footer-links li{margin-bottom:12px}
+.footer-links a{font-size:0.9rem;display:inline-flex;align-items:center;gap:8px;transition:all var(--transition-fast)}
+.footer-links a:hover{color:var(--color-secondary);padding-left:4px}
+.footer-contact li{display:flex;align-items:flex-start;gap:12px;margin-bottom:16px;font-size:0.9rem}
+.footer-contact li i{color:var(--color-secondary);margin-top:4px;flex-shrink:0}
+.footer-bottom{padding:24px 0;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;font-size:0.85rem}
+.footer-bottom a{color:var(--color-secondary)}
+.footer-bottom a:hover{text-decoration:underline}
+
+/* Page Hero */
+.page-hero{background:linear-gradient(135deg,var(--color-primary-dark) 0%,var(--color-primary) 100%);color:var(--color-white);padding:100px 0 60px;text-align:center;position:relative;overflow:hidden}
+.page-hero::after{content:'';position:absolute;bottom:-2px;left:0;right:0;height:60px;background:var(--color-white);clip-path:ellipse(55% 100% at 50% 100%)}
+.page-hero h1{color:var(--color-white);margin-bottom:16px}
+.page-hero p{color:rgba(255,255,255,0.8);font-size:1.1rem;max-width:600px;margin:0 auto}
+.page-breadcrumb{display:flex;justify-content:center;gap:8px;align-items:center;font-size:0.88rem;color:rgba(255,255,255,0.6);margin-bottom:20px}
+.page-breadcrumb a{color:rgba(255,255,255,0.6)}
+.page-breadcrumb a:hover{color:var(--color-secondary)}
+.page-breadcrumb .separator{font-size:0.7rem}
+
+/* Animations */
+.fade-up{opacity:0;transform:translateY(30px);transition:opacity 0.6s ease,transform 0.6s ease}
+.fade-up.visible{opacity:1;transform:translateY(0)}
+
+/* Responsive */
+@media(max-width:1024px){
+    .hero-grid{grid-template-columns:1fr;text-align:center}
+    .hero-content{max-width:100%}
+    .hero-buttons{justify-content:center}
+    .hero-stats{justify-content:center}
+    .hero-visual{display:none}
+    .services-grid{grid-template-columns:repeat(2,1fr)}
+    .offerings-grid{grid-template-columns:1fr}
+    .about-grid{grid-template-columns:1fr}
+    .contact-grid{grid-template-columns:1fr}
+    .footer-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:768px){
+    :root{--section-padding:70px 0}
+    .top-bar{display:none}
+    .navbar-toggle{display:flex}
+    .navbar-nav{display:none;position:absolute;top:100%;left:0;right:0;background:var(--color-white);flex-direction:column;padding:20px;box-shadow:var(--shadow-lg);border-top:1px solid var(--color-light-gray)}
+    .navbar-nav.active{display:flex}
+    .navbar-cta{margin-left:0;margin-top:8px}
+    .navbar-cta .btn{width:100%;justify-content:center}
+    .services-grid,.testimonials-grid{grid-template-columns:1fr}
+    .about-features{grid-template-columns:1fr}
+    .footer-grid{grid-template-columns:1fr}
+    .footer-bottom{flex-direction:column;text-align:center}
+    .form-row{grid-template-columns:1fr}
+    .hero{padding:80px 0 70px}
+    .hero-stats{flex-direction:column;gap:20px}
+}
+    </style>
+</head>
+<body>
+
+<!-- Top Bar -->
+<div class="top-bar">
+    <div class="container">
+        <div class="top-bar-left">
+            <a href="mailto:info@asabis.ca"><i class="fas fa-envelope"></i> info@asabis.ca</a>
+            <a href="tel:+15878795183"><i class="fas fa-phone"></i> +1 587-879-5183</a>
+            <span><i class="fas fa-clock"></i> Monday – Friday 8:30 AM – 5:00 PM</span>
+        </div>
+        <div class="top-bar-right">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+</div>
+
+<!-- Header -->
+<header class="site-header">
+    <div class="container">
+        <nav class="navbar">
+            <a href="#" class="navbar-brand">
+                <div class="brand-text">Asabis<small>Consulting Services</small></div>
+            </a>
+            <button class="navbar-toggle" aria-label="Toggle Navigation"><span></span><span></span><span></span></button>
+            <ul class="navbar-nav">
+                <li class="nav-item active"><a class="nav-link" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="services.html">Our Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Our Blog</a></li>
+                <li class="nav-item"><a class="nav-link" href="careers.html">Careers</a></li>
+                <li class="nav-item navbar-cta"><a href="contact.html" class="btn btn-primary">Work with Us</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- Hero -->
+<section class="hero">
+    <div class="container">
+        <div class="hero-grid">
+            <div class="hero-content">
+                <div class="hero-badge"><i class="fas fa-award"></i> Trusted Accounting Professionals</div>
+                <h1>Your Trusted Partner in <span>Accounting</span> &amp; Financial Excellence</h1>
+                <p class="hero-text">At Asabis, we pride ourselves in providing hands-on training to individuals seeking to enhance their skills and competence, thus improving their employability and to business owners who wish to take control of their day to day operations with quality. Our staff is also equipped to take over all your Bookkeeping, Accounting, and Tax compliance needs so that you can concentrate on what you do best.</p>
+                <div class="hero-buttons">
+                    <a href="services.html" class="btn btn-secondary btn-lg">Our Services <i class="fas fa-arrow-right"></i></a>
+                    <a href="contact.html" class="btn btn-outline btn-lg">Contact Us</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="hero-stat"><span class="stat-number">500+</span><span class="stat-label">Clients Served</span></div>
+                    <div class="hero-stat"><span class="stat-number">10+</span><span class="stat-label">Years Experience</span></div>
+                    <div class="hero-stat"><span class="stat-number">100%</span><span class="stat-label">Client Focused</span></div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-cards">
+                    <div class="hero-card hero-card-1">
+                        <div class="hero-card-icon blue"><i class="fas fa-book-open"></i></div>
+                        <h4>Hands-On Training</h4>
+                        <p>Practical bookkeeping &amp; accounting skills for career advancement</p>
+                    </div>
+                    <div class="hero-card hero-card-2">
+                        <div class="hero-card-icon gold"><i class="fas fa-calculator"></i></div>
+                        <h4>Tax &amp; Compliance</h4>
+                        <p>Professional tax filing and full compliance services</p>
+                    </div>
+                    <div class="hero-card hero-card-3">
+                        <div class="hero-card-icon green"><i class="fas fa-chart-line"></i></div>
+                        <h4>Business Advisory</h4>
+                        <p>Customized solutions for business growth and financial recovery</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services -->
+<section class="services section-padding" id="services">
+    <div class="container">
+        <div class="section-header fade-up">
+            <span class="section-label">What We Do</span>
+            <h2>Our Core Services</h2>
+            <p>We deliver comprehensive accounting solutions tailored to individuals and businesses across Canada.</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card fade-up">
+                <div class="service-icon icon-blue"><i class="fas fa-graduation-cap"></i></div>
+                <h3>Bookkeeping / Accounting Training</h3>
+                <p>We are all about solving the employee/employer dilemma. Employees are always motivated when they know exactly how to perform the tasks assigned to them, or to take on more challenging tasks.</p>
+                <a href="services.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="service-card fade-up">
+                <div class="service-icon icon-gold"><i class="fas fa-file-invoice-dollar"></i></div>
+                <h3>Bookkeeping / Accounting / Tax Services</h3>
+                <p>We employ a highly experienced and qualified staff to look after your bookkeeping, Accounting, payroll and Tax needs whether you are an individual, a small or a mid-sized business, we will like to hear from you.</p>
+                <a href="services.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="service-card fade-up">
+                <div class="service-icon icon-navy"><i class="fas fa-handshake"></i></div>
+                <h3>Advisory Services</h3>
+                <p>We value your input because we understand that every business is unique. At Asabis Consulting Services, we specialize in crafting tailor-made solutions designed to meet your specific goals.</p>
+                <a href="services.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Offerings -->
+<section class="offerings section-padding">
+    <div class="container">
+        <div class="section-header fade-up">
+            <span class="section-label">Comprehensive Solutions</span>
+            <h2>Everything You Need to Succeed</h2>
+            <p>Focus on what you do best while we handle the rest.</p>
+        </div>
+        <div class="offerings-grid">
+            <div class="offerings-block fade-up">
+                <h3>Accounting Services</h3>
+                <p class="offerings-subtitle">Empower Your Business with Our Comprehensive Accounting Service</p>
+                <ul class="offerings-list">
+                    <li><i class="fas fa-check-circle"></i> Payroll Services</li>
+                    <li><i class="fas fa-check-circle"></i> Bookkeeping Services</li>
+                    <li><i class="fas fa-check-circle"></i> Tax Filing Services</li>
+                    <li><i class="fas fa-check-circle"></i> Consulting Services</li>
+                </ul>
+            </div>
+            <div class="offerings-block fade-up">
+                <h3>Training Programs</h3>
+                <p class="offerings-subtitle">Elevate Your Skills with Our Professional Training Programs</p>
+                <ul class="offerings-list">
+                    <li><i class="fas fa-check-circle"></i> Hands-on Training in Bookkeeping &amp; Full Cycle Accounting</li>
+                    <li><i class="fas fa-check-circle"></i> Job Readiness Training</li>
+                    <li><i class="fas fa-check-circle"></i> Training for Business Owners</li>
+                    <li><i class="fas fa-check-circle"></i> Practical Training in Excel and PowerPoint</li>
+                    <li><i class="fas fa-check-circle"></i> Sage 50 Accounting Training (All Modules)</li>
+                    <li><i class="fas fa-check-circle"></i> Sage Payroll Training</li>
+                    <li><i class="fas fa-check-circle"></i> Caseware Essentials Training (Entry Level)</li>
+                    <li><i class="fas fa-check-circle"></i> Practical Training Using Specialized Software Applications</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About / Promise -->
+<section class="about-section section-padding" id="about">
+    <div class="container">
+        <div class="about-grid">
+            <div class="about-content fade-up">
+                <span class="section-label">Our Promise</span>
+                <h2>Innovation &amp; Quality Every Step of the Way</h2>
+                <p>Whether you need a business plan, financial reconstruction (corporate recovery), or if you want to embark on a plan to grow your business (business growth). At Asabis, we employ innovation and quality every step of the way.</p>
+                <p>If you are looking for help to harmonize your existing/international Accounting skills with the Canadian procedures, then you are at the right place.</p>
+                <div class="about-features">
+                    <div class="about-feature"><div class="about-feature-icon"><i class="fas fa-bullseye"></i></div><div><h4>Tailored Solutions</h4><p>Custom approaches for every unique business</p></div></div>
+                    <div class="about-feature"><div class="about-feature-icon"><i class="fas fa-users"></i></div><div><h4>Expert Team</h4><p>Experienced professionals dedicated to your success</p></div></div>
+                    <div class="about-feature"><div class="about-feature-icon"><i class="fas fa-laptop"></i></div><div><h4>Modern Technology</h4><p>Advanced tools and virtual training options</p></div></div>
+                    <div class="about-feature"><div class="about-feature-icon"><i class="fas fa-heart"></i></div><div><h4>Client Focused</h4><p>Your goals are our top priority</p></div></div>
+                </div>
+            </div>
+            <div class="about-visual fade-up">
+                <div class="about-stat-card"><div class="stat-icon"><i class="fas fa-graduation-cap"></i></div><div><h4>Professional Training</h4><p>Hands-on guided mentoring with real-world applications</p></div></div>
+                <div class="about-stat-card"><div class="stat-icon"><i class="fas fa-briefcase"></i></div><div><h4>Career Advancement</h4><p>Helping individuals secure roles at top companies</p></div></div>
+                <div class="about-stat-card"><div class="stat-icon"><i class="fas fa-shield-alt"></i></div><div><h4>Full Compliance</h4><p>Ensuring your financials meet all Canadian requirements</p></div></div>
+                <div class="about-stat-card"><div class="stat-icon"><i class="fas fa-globe-americas"></i></div><div><h4>International Skills</h4><p>Harmonize global accounting skills with Canadian procedures</p></div></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials -->
+<section class="testimonials section-padding" id="testimonials">
+    <div class="container">
+        <div class="section-header fade-up">
+            <span class="section-label">Client Stories</span>
+            <h2>What Our Clients Say</h2>
+            <p>Real stories from real people whose lives and careers we've helped transform.</p>
+        </div>
+        <div class="testimonials-grid">
+            <div class="testimonial-card fade-up">
+                <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <div class="testimonial-quote-icon"><i class="fas fa-quote-left"></i></div>
+                <p class="testimonial-text">I came to Canada from Sweden with a Master's degree in Finance with no work experience ever. Emmanuel put me through some hands-on guided training/mentoring and I had my first job ever in Iqaluit making a six figure salary. This was just a miracle to me.</p>
+                <div class="testimonial-author"><div class="testimonial-avatar">TG</div><div class="testimonial-author-info"><h4>Therese G.</h4><span>Training Client</span></div></div>
+            </div>
+            <div class="testimonial-card fade-up">
+                <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <div class="testimonial-quote-icon"><i class="fas fa-quote-left"></i></div>
+                <p class="testimonial-text">After arriving in Canada in June 2022 with an international accounting degree and limited English proficiency, I enhanced my language skills at MacEwan University. Emmanuel from Asabis Consulting Services provided training in Canadian accounting practices and assisted in refining my resume and interview techniques. Within two months of completing this training, I secured my current role as an Accounts Payable Coordinator at General Motors.</p>
+                <div class="testimonial-author"><div class="testimonial-avatar">RN</div><div class="testimonial-author-info"><h4>Rosy N.</h4><span>Accounts Payable Coordinator, General Motors</span></div></div>
+            </div>
+            <div class="testimonial-card fade-up">
+                <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <div class="testimonial-quote-icon"><i class="fas fa-quote-left"></i></div>
+                <p class="testimonial-text">I was late in filing my personal taxes for two years (2022 and 2023). When I came across Emmanuel on the last filing date April 30, he helped me file it and I got the best return ever.</p>
+                <div class="testimonial-author"><div class="testimonial-avatar">M</div><div class="testimonial-author-info"><h4>Marinoel</h4><span>Tax Filing Client</span></div></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section class="contact-section section-padding" id="contact">
+    <div class="container">
+        <div class="contact-grid">
+            <div class="fade-up">
+                <h2 style="margin-bottom:12px;">Get in Touch</h2>
+                <p style="color:var(--color-mid-gray);margin-bottom:32px;">Have a question about our services or training programs? We're here to help.</p>
+                <div class="contact-info-cards">
+                    <div class="contact-info-card"><div class="card-icon"><i class="fas fa-phone"></i></div><div><h4>Phone</h4><p><a href="tel:+15878795183">+1 587-879-5183</a></p></div></div>
+                    <div class="contact-info-card"><div class="card-icon"><i class="fas fa-envelope"></i></div><div><h4>Email</h4><p><a href="mailto:info@asabis.ca">info@asabis.ca</a></p></div></div>
+                    <div class="contact-info-card"><div class="card-icon"><i class="fas fa-map-marker-alt"></i></div><div><h4>Location</h4><p>Edmonton, Alberta, Canada</p></div></div>
+                    <div class="contact-info-card"><div class="card-icon"><i class="fas fa-clock"></i></div><div><h4>Business Hours</h4><p>Monday – Friday 8:30 AM – 5:00 PM</p></div></div>
+                </div>
+            </div>
+            <div class="contact-form-wrap fade-up">
+                <h3>Send Us a Message</h3>
+                <p>Fill out the form below and we'll get back to you as soon as possible.</p>
+                <form action="#" method="post">
+                    <div class="form-row">
+                        <div class="form-group"><label for="first-name">First Name</label><input type="text" id="first-name" class="form-control" placeholder="Your first name" required></div>
+                        <div class="form-group"><label for="last-name">Last Name</label><input type="text" id="last-name" class="form-control" placeholder="Your last name" required></div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group"><label for="email">Email Address</label><input type="email" id="email" class="form-control" placeholder="you@example.com" required></div>
+                        <div class="form-group"><label for="phone">Phone Number</label><input type="tel" id="phone" class="form-control" placeholder="(123) 456-7890"></div>
+                    </div>
+                    <div class="form-group"><label for="message">Message</label><textarea id="message" class="form-control" rows="5" placeholder="How can we help you?" required></textarea></div>
+                    <button type="submit" class="btn btn-primary btn-lg" style="width:100%;justify-content:center;">Send Message <i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+    <div class="container">
+        <h2 class="fade-up">Ready to Take the Next Step?</h2>
+        <p class="fade-up">Whether you need professional accounting services or hands-on training to advance your career, we're here to help you succeed.</p>
+        <div class="cta-buttons fade-up">
+            <a href="mailto:info@asabis.ca" class="btn btn-secondary btn-lg">Get Started Today <i class="fas fa-arrow-right"></i></a>
+            <a href="#services" class="btn btn-outline btn-lg">View Our Services</a>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="brand-text">Asabis<small>Consulting Services</small></div>
+                <p>Empowering businesses and individuals to achieve financial excellence through innovative accounting training and consultancy services.</p>
+                <div class="footer-social">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="services.html">Our Services</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="#">Our Blog</a></li>
+                    <li><a href="careers.html">Careers</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Our Services</h4>
+                <ul class="footer-links">
+                    <li><a href="services.html">Payroll Services</a></li>
+                    <li><a href="services.html">Bookkeeping Services</a></li>
+                    <li><a href="services.html">Tax Filing Services</a></li>
+                    <li><a href="services.html">Consulting Services</a></li>
+                    <li><a href="services.html">Accounts Payable Training</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Contact Us</h4>
+                <ul class="footer-contact">
+                    <li><i class="fas fa-map-marker-alt"></i><span>Edmonton, Alberta, Canada</span></li>
+                    <li><i class="fas fa-phone"></i><a href="tel:+15878795183">+1 587-879-5183</a></li>
+                    <li><i class="fas fa-envelope"></i><a href="mailto:info@asabis.ca">info@asabis.ca</a></li>
+                    <li><i class="fas fa-clock"></i><span>Monday – Friday 8:30 AM – 5:00 PM</span></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Asabis Consulting Services. All rights reserved.</p>
+            <p>Powered by <a href="https://wordpress.org" target="_blank" rel="noopener">WordPress</a></p>
+        </div>
+    </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    var navToggle = document.querySelector('.navbar-toggle');
+    var navMenu = document.querySelector('.navbar-nav');
+    if (navToggle && navMenu) {
+        navToggle.addEventListener('click', function () {
+            navMenu.classList.toggle('active');
+            navToggle.classList.toggle('open');
+        });
+        navMenu.querySelectorAll('.nav-link').forEach(function (link) {
+            link.addEventListener('click', function () {
+                navMenu.classList.remove('active');
+                navToggle.classList.remove('open');
+            });
+        });
+    }
+    var header = document.querySelector('.site-header');
+    if (header) {
+        window.addEventListener('scroll', function () {
+            if (window.scrollY > 50) { header.classList.add('scrolled'); }
+            else { header.classList.remove('scrolled'); }
+        });
+    }
+    var fadeElements = document.querySelectorAll('.fade-up');
+    if (fadeElements.length > 0 && 'IntersectionObserver' in window) {
+        var observer = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+        fadeElements.forEach(function (el) { observer.observe(el); });
+    }
+    document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+        anchor.addEventListener('click', function (e) {
+            var targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            var target = document.querySelector(targetId);
+            if (target) {
+                e.preventDefault();
+                var headerHeight = header ? header.offsetHeight : 0;
+                var targetPosition = target.getBoundingClientRect().top + window.scrollY - headerHeight;
+                window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+            }
+        });
+    });
+});
+</script>
+</body>
+</html>
